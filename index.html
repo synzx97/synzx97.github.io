@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Description -->
+     <meta name="Description" content="Portofolio, Portofolio synzx and project"/>
+     <meta name="author" content="Synzx" />
+     <meta name="keyword" content="HTML, CSS, and Java Script" />
+
+     <!-- Open Grap Basic -->
+     <meta property="og:url" content="www.dummy.com"/>
+     <meta property="og:title" content="Portofolio Synzx" /> 
+     <meta property="og:type" content="website" />
+     <meta property="og:image" content="path-file.dummy" />
+     <meta property="og:description" content="Portofolio synzx and my website" />
+
+    <!-- Link -->
+     <link rel="stylesheet" href="index.css" />
+     <link rel="icon" href="" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <title>Portofolio Synzx</title>
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+    <!-- Navbar -->
+     <div class="container-navbar">
+        <header>
+                <a class="logo-navbar" href="#">synzx</a>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav id="nav">    
+                <div class="menu-toggle">
+                        <a href="#home" class="active">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+     </div>
+
+<!-- Section Home -->
+ <section class="home reveal" id="home">
+  
+<div class="home-content">
+    <h1>Hi, it's <span>Bayu Saputra</span></h1>
+    <h3 class="typing-text">I'm a <br><span id="typing"></span></h3>
+    <p>Saya seorang Full stack Developer, Ethical Hacking, dan juga Software Engineer</p>
+    <div class="social-icons">
+        <a href=""><img src="icon/social icon/github.png" alt="github" width="35" height="35"></a>
+        <a href=""><img src="icon/social icon/instagram.png" alt="instagram" width="35" height="35"></a>
+        <a href=""><img src="icon/social icon/youtube.png" alt="youtube" width="35" height="35"></a>
+    </div>
+    <a href="" class="btn">Hire me</a>
+    <a href="" class="btn-1">Download My CV</a>
+</div>
+
+  <div class="home-img">
+        <img src="image/Photo.jpg" />
+  </div>
+</section>
+
+<!-- Section About -->
+ <section class="about reveal" id="about">
+    <h2>About me</h2>
+    <p>Hi, nama saya Fathur Alamsyah Bayu Saputra, saya seorang siswa pelajar tingkat SMA/SMK saat ini, saya sedang mempelajari Fullstack Developer untuk mengembangkan skill saya dibidang <strong>IT</strong>, terutama saya tertarik juga di bidang Ethical Hacking. 
+       Hobbi saya yakni olahraga, mendengarkan lagu, coding, membongkar sistem, dan juga mempelajari hall baru. Terutama saya sangat suka belajar dalam keadaan sendiri dan juga menggunakan metode <em><strong>autodidak</strong></em>. Saya bercita cita ingin mengejar pendidikan,
+       di luar negeri, terutama di jepang,
+       <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+            <path d="m0 0h3v2H0" fill="#fff" stroke="#000" stroke-width="0.05"/>
+            <circle cx="1.5" cy="1" r=".6" fill="#bc002d" stroke="#000" stroke-width="0.03"/>
+        </svg>
+       agar bisa menjadi seorang Software Engineer.
+    </p>
+
+
+       <h2 id="spotify">
+        <btn id="showSpotify"><img src="icon/social icon/spotify-logo.png" alt="spotify" width="40">Music:</btn>
+       </h2>
+    
+
+       <div class="popup-overlay" id="spotifyPopup">
+        <div class="popup-content">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <div id="spotify-list">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1YYhDizHx7PnDhAhko6cDS?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3VOgOT6SNjrRjhjuisphY7?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3be9ACTxtcL6Zm4vJRUiPG?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0yVovOZGZtBXoZQr5gakeb?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7wyOQn2IaYT0nlb1VI9lvu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+       </div>
+ </section>
+
+ <!-- Section skills -->
+ <section class="skills reveal" id="skills">
+    <h2>Skills</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="tab1"><i class="fas fa-code"></i>
+        <span>Project</span>
+        </button>
+
+        <button class="tab-btn" data-tab="tab2"><i class="fas fa-lock"></i>
+        <span>Certificates</span>
+        </button>
+        <button class="tab-btn" data-tab="tab3"><i class="fas fa-cogs"></i>
+        <span>Teach Stack</span>
+        </button>
+    </div>
+
+        <div class="tab-content active" id="tab1">
+            <h2>Project</h2>
+            <p>Dummy</p>
+        </div>
+
+        <div class="tab-content" id="tab2">
+            <div class="certificate-grid">
+
+                <div class="certificates-card">
+                  <img src="" alt="Certificates-1">
+                </div>
+
+                <div class="certificates-card">
+                  <img src="" alt="Certificates-2">
+                </div>
+
+                <div class="certificates-card">
+                  <img src="" alt="Certificates-3">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab3">
+            <div class="tech-grid">
+                <div class="tech-card">
+                  <figure>
+                  <img src="icon/tech stack/HTML.svg" alt="HTML">
+                <figcaption>HTML</figcaption>
+                </figure>
+                </div>
+
+                <div class="tech-card">
+                <figure>
+                  <img src="icon/tech stack/CSS.SVG" alt="CSS">
+                <figcaption>CSS</figcaption>
+                </figure>
+                </div>
+
+                <div class="tech-card">
+                <figure>
+                  <img src="icon/tech stack/JS.SVG" alt="javascript">
+                <figcaption>JavaScript</figcaption>
+                </figure>
+                </div>
+
+                <div class="tech-card">
+                <figure>
+                   <img src="icon/tech stack/BASH.SVG" alt="bash">
+                <figcaption>Bash</figcaption>
+                </figure>
+                </div>
+
+                <div class="tech-card">
+                  <figure>
+                   <img src="icon/tech stack/NEOVIM.SVG" alt="neovim">
+                  <figcaption>NeoVim</figcaption>
+                  </figure>
+                  </div>
+
+                <div class="tech-card">
+                  <figure>
+                   <img src="icon/tech stack/VIM.SVG" alt="vim">
+                  <figcaption>Vim</figcaption>
+                  </figure>
+                  </div>
+
+                <div class="tech-card">
+                  <figure>
+                    <img src="icon/tech stack/GIT.SVG" alt="git">
+                  <figcaption>Git</figcaption>
+                  </figure>
+                </div>
+
+                <div class="tech-card">
+                  <figure>
+                    <img src="icon/tech stack/GITHUB.SVG" alt="github">
+                    <figcaption>GitHub</figcaption>
+                  </figure>
+                </div>
+                
+                <div class="tech-card">
+                  <figure>
+                    <img src="icon/tech stack/MYSQL.SVG" alt="mysql">
+                    <figcaption>MySQL</figcaption>
+                  </figure>
+                </div>
+
+                <div class="tech-card">
+                  <figure>
+                    <img src="icon/tech stack/FIREFOX.SVG" alt="firefox">
+                    <figcaption>FireFox</figcaption>
+                  </figure>
+                </div>
+
+                <div class="tech-card">
+                  <figure>
+                    <img src="icon/tech stack/CHROME.SVG" alt="chrome">
+                    <figcaption>Chrome</figcaption>
+                  </figure>
+                </div>
+
+                <div class="tech-card">
+                  <img src="icon/tech stack/OPENAI.SVG" alt="openai">
+                  <figcaption>OpenAI</figcaption>
+                </div>
+
+                <div class="tech-card">
+                  <img src="icon/tech stack/UBUNTU.SVG" alt="ubuntu">
+                  <figcaption>Ubuntu</figcaption>
+                </div>
+
+                <div class="tech-card">
+                  <figure>
+                    <img src="icon/tech stack/ANDROID.SVG" alt="android">
+                    <figcaption>Android</figcaption>
+                  </figure>
+                </div>
+              </div>     
+        </div>
+ </section>
+
+<!-- Section Contact -->
+<section class="contact reveal" id="contact">
+<h1>Contact us</h1>
+
+  <div class="contact-container">
+    <div class="contact-text">
+      <h2>Let's work together<span>.</span></h2>
+    <p>Or reach us via : <a href="">synzx997@gmail.com</a></p>
+
+    <form action="https://formspree.io/f/mzzjgewe" method="POST" class="contact-form">
+      <div class="form-row">
+        <input type="text" name="firstname" placeholder="First Name">
+        <input type="text" name="lastname" placeholder="Last Name">
+      </div>
+
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea placeholder="Massage"></textarea>
+
+      <div class="form-action">
+        <button type="button" class="attach"><i>📎</i>Add attacment</button>
+        <button type="submit" class="send">Send massage</button>
+      </div>
+    </form>
+
+    <p id="status"></p>
+    </div>
+
+    <div class="contact-image">
+      <img src="image/Contact.jpg" alt="Japan image">
+    </div>
+  </div>
+</section>
+
+<!-- Section Footer -->
+<footer class="reveal">
+ <p>Create by &copy; <spam>Fathur Alamsyah Bayu Saputra</spam>(synzx)</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
