@@ -588,6 +588,99 @@ section{
 .tech-card p {
   font-size: 12px;
 }
+
+/* 📱 Responsif untuk tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tab-btn {
+    font-size: 1.2rem;
+  }
+
+  .tab-btn i {
+    font-size: 1.6rem;
+  }
+}
+
+/* 📱 Responsif untuk HP (<= 768px) */
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap;
+    max-height: none;
+    padding: 10px;
+  }
+
+  .tab-btn {
+    flex: 1 1 45%;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .certificates-card img {
+    height: 160px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .tech-card img {
+    height: 60px;
+  }
+
+  .skills {
+    font-size: 2.5rem;
+    padding-top: 50px;
+  }
+}
+
+/* 📱 Responsif untuk layar kecil banget (<= 480px) */
+@media (max-width: 480px) {
+  .tab-btn {
+    flex: 1 1 100%;
+    font-size: 1rem;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-card img {
+    height: 50px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-image {
+    order: -1;
+  }
+
+  #contact h1 {
+    font-size: 2.5rem;
+    margin: 60px 0 20px;
+  }
+}
+
+
 @keyframes fade {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
