@@ -142,7 +142,7 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const form = document.getElementById("contactForm");
-const statusEL = document.getElementById("status");
+const statusEl = document.getElementById("status");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
