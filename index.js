@@ -135,13 +135,13 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 });
 
 // Backend //
-import { createClient } from "npm:@supabase/supabase-js@2";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const supabaseUrl = "https://vrrltxwszppovxmmqvlk.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZycmx0eHdzenBwb3Z4bW1xdmxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyOTQxMDUsImV4cCI6MjA3Njg3MDEwNX0.pMChPMfDy6ONQk3hsbVopAWRD9ZIT5xgT4lKjvvw1TE";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-const from = document.getElementById("contactForm");
+const form = document.getElementById("contactForm");
 const statusEL = document.getElementById("status");
 
 form.addEventListener("submit", async (e) => {
