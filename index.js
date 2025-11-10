@@ -133,3 +133,33 @@ document.addEventListener("DOMContentLoaded", typeEffect);
     status.textContent = "Gagal mengirim pesan. Coba lagi.";
   }
 });
+
+// Backend //
+import { createClient } from "npm:@supabase/supabase-js@2";
+
+const supabaseUrl = "https://vrrltxwszppovxmmqvlk.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZycmx0eHdzenBwb3Z4bW1xdmxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyOTQxMDUsImV4cCI6MjA3Njg3MDEwNX0.pMChPMfDy6ONQk3hsbVopAWRD9ZIT5xgT4lKjvvw1TE";
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+const from = document.getElementById("contactForm");
+const statusEL = document.getElementById("status");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  const { error } = await supabase
+    .from("Contact_message") // ← pastikan sama dengan nama tabel
+    .insert([data]);
+
+      if (error) {
+    statusEl.textContent = "❌ Gagal mengirim: " + error.message;
+    statusEl.style.color = "red";
+  } else {
+    statusEl.textContent = "✅ Pesan berhasil dikirim!";
+    statusEl.style.color = "green";
+    form.reset();
+  }
+});
