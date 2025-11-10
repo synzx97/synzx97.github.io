@@ -137,13 +137,16 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 // Backend //
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
+// Supabase Config
 const supabaseUrl = "https://vrrltxwszppovxmmqvlk.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZycmx0eHdzenBwb3Z4bW1xdmxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyOTQxMDUsImV4cCI6MjA3Njg3MDEwNX0.pMChPMfDy6ONQk3hsbVopAWRD9ZIT5xgT4lKjvvw1TE";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+// DOM Elements
 const form = document.getElementById("contactForm");
 const statusEl = document.getElementById("status");
 
+// Submit Handler
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -151,10 +154,10 @@ form.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   const { error } = await supabase
-    .from("contact_message") // ← pastikan sama dengan nama tabel
+    .from("contact_message")  // pastikan nama tabel lowercase
     .insert([data]);
 
-      if (error) {
+  if (error) {
     statusEl.textContent = "❌ Gagal mengirim: " + error.message;
     statusEl.style.color = "red";
   } else {
