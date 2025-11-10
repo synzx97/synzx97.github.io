@@ -151,7 +151,7 @@ form.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   const { error } = await supabase
-    .from("Contact_message") // ← pastikan sama dengan nama tabel
+    .from("contact_message") // ← pastikan sama dengan nama tabel
     .insert([data]);
 
       if (error) {
