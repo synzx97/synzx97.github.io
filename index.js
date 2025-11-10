@@ -106,34 +106,6 @@ document.addEventListener("DOMContentLoaded", typeEffect);
     });
   });
 
-  document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = {
-    firstName: e.target.firstName.value,
-    lastName: e.target.lastName.value,
-    email: e.target.email.value,
-    message: e.target.message.value
-  };
-
-  const response = await fetch("https://formspree.io/f/mzzjgewe", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify(formData)
-  });
-
-  const status = document.getElementById("status");
-  if (response.ok) {
-    status.textContent = "Pesan berhasil dikirim!";
-    e.target.reset();
-  } else {
-    status.textContent = "Gagal mengirim pesan. Coba lagi.";
-  }
-});
-
 // Backend //
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
